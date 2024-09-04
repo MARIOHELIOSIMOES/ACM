@@ -2,6 +2,7 @@ package br.gov.sp.saaemogimirim.ACM.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
@@ -11,19 +12,28 @@ public class AIT {
   //  @GeneratedValue(strategy = GenerationType.IDENTITY)
   //  private Long id;
     @Id
-    private String timeCol;
+    @Column(name="TIME_COL")
+    private LocalDateTime timeCol;
+    @Column(name="AIT_1104A_1")
     private float ait_1104a_1;
+    @Column(name="AIT_1104B_1")
     private float ait_1104b_1;
+    @Column(name="AIT_1104C_1")
     private float ait_1104c_1;
+
+    @Column(name="AIT_1109A_1")
     private float ait_1109a_1;
+    @Column(name="AIT_1109A_2")
     private float ait_1104a_2;
+    @Column(name="AIT_1109A_3")
     private float ait_1104a_3;
+    @Column(name="AIT_1109A_4")
     private float ait_1104a_4;
 
     public AIT() {
     }
 
-    public AIT(String timeCol, float ait_1104a_1, float ait_1104b_1, float ait_1104c_1, float ait_1109a_1, float ait_1104a_2, float ait_1104a_3, float ait_1104a_4) {
+    public AIT(LocalDateTime timeCol, float ait_1104a_1, float ait_1104b_1, float ait_1104c_1, float ait_1109a_1, float ait_1104a_2, float ait_1104a_3, float ait_1104a_4) {
         this.timeCol = timeCol;
         this.ait_1104a_1 = ait_1104a_1;
         this.ait_1104b_1 = ait_1104b_1;
@@ -43,11 +53,11 @@ public class AIT {
     }
     */
 
-    public String getTimeCol() {
+    public LocalDateTime getTimeCol() {
         return timeCol;
     }
 
-    public void setTimeCol(String timeCol) {
+    public void setTimeCol(LocalDateTime timeCol) {
         this.timeCol = timeCol;
     }
 
