@@ -22,7 +22,7 @@ Este projeto é uma API desenvolvida em Java com o framework Spring Boot, destin
 * src/test/java: Testes unitários e de integração.
 ## Configuração
 Pré-requisitos
-* Java 11 ou superior
+* Java 21 ou superior
 * Maven para gerenciamento de dependências
 * SQL Server configurado e com os dados de AIT.
 
